@@ -16,7 +16,9 @@
 
 	<?php wp_footer(); ?>
 <footer id="copyright">
-    Copyright &#169 | Alejandra Valdivia 2022
-  </footer>
+Copyright | Alejandra Valdivia 
+<?php
+echo "&copy" . date("Y") . " alexvcreative.com";
+?>  </footer>
 </body>
 </html>

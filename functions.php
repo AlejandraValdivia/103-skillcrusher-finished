@@ -101,3 +101,13 @@ function skillcrushstarter_add_body_class($classes)
 }
 add_filter('body_class', 'skillcrushstarter_add_body_class');
 
+<?php
+add_action('after_setup_theme', '_my_sd_footer_changes',15); 
+function _my_sd_footer_changes(){
+  remove_action( 'dt_footer_copyright', 'dt_footer_copyright_default', 10 );
+  remove_action( 'dt_footer_copyright', 'sd_footer_copyright_default', 10 );
+  add_action( 'dt_footer_copyright', 'custom_dt_footer_copyright_text', 10 );
+}
+function custom_dt_footer_copyright_text(){
+  
+}
